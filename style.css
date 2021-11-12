@@ -149,6 +149,54 @@ header .menu {
     from{bottom: 50px;left: 25%;}
     to{bottom: 30px;left: 40px;}
 }
+.scrolldown{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    justify-content: space-between;
+    text-align: center;
+    left: 50%;
+    bottom: 3px;
+}
+.scrolldown1 {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 14vw;
+}
+.scrolldown1::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 4vw;
+    background: #fff;
+    animation: pathmove 1.4s ease-in-out infinite;
+    opacity: 0;
+}
+@keyframes pathmove{
+    0%{
+        height:0;
+        
+        opacity: 0;
+    }
+    70%{
+        height:4vw;
+        opacity: 1;
+    }
+    100%{
+        height:0;
+        
+        opacity: 0;
+    }
+}
+.scrolldown2{
+    display: block;
+    color: #fff;
+}
 
 
 /* 主要內容區 */
